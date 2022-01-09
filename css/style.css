@@ -272,7 +272,7 @@ ul {
     .heroGrid {
         height: auto;
         padding: 0%;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 300px 1fr;
         grid-template-columns: 10% 80% 10%;
         justify-content: center;
         align-content: flex-start;
@@ -285,7 +285,6 @@ ul {
         grid-area: aboutMe;
         grid-column-start: 2;
         color: white;
-
     }
 
     #headshot > img {
@@ -310,5 +309,39 @@ ul {
     #skills {
         grid-row-start: 2;
         grid-column-start: 2;
+    }
+
+    .myWorkGrid {
+        grid-template-rows: 10% 25% 1fr;
+        grid-template-columns: 10% 80% 10%;
+        /* grid-template-areas:
+            "  myWorkHeader  "
+            "  projectTitle  "
+            "  projectImage  "; */
+    }
+
+    #myWorkHeader {
+        grid-area: myWorkHeader;
+    }
+
+    #projectTitle {
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        padding: 0;
+    }
+    #projectImage {
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        
+    }
+
+        #projectImage >img {
+        /* object-fit: cover;
+        width: 100%; */
+        margin-top: 75px;
     }
 }
