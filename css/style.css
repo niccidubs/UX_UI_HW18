@@ -129,7 +129,7 @@ ul {
    =====================*/
 
 
-   .heroGrid {
+.heroGrid {
     display: grid;
     height: 680px;
     background-color: #2e4159;
@@ -152,18 +152,12 @@ ul {
     grid-column-start: 3;
 }
 
-
-
-
-
-
 /* ======================
    About Me
    =====================*/
 
 .bioGrid {
     display: grid;
-    height: 680px;
     background-color: white;
     padding: auto;
     grid-template-columns: 20% 50% 10% 20%;
@@ -188,21 +182,28 @@ ul {
    My Work
    =====================*/
 
-.myWorkHeader {
+#myWorkGrid {
+    display: grid;
+    background-color: white;
+    padding: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 50%;
+    grid-template-areas:
+        "myWorkHeader myWorkHeader"
+        "projectTitle projectImage";
+}
+   #myWorkHeader {
+    grid-area: myWorkHeader;
     padding-left: 75px;
     padding-right: 75px;
 }
 
-.workSection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-    padding-left: 75px;
+.projectTitle {
+    grid-area: projectTitle;
 }
 
-.myWorkChild1 {
-    padding-right: 100px;
+.projectImage {
+    grid-area: projectImage;
 }
 
 /* ======================
@@ -264,7 +265,7 @@ ul {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 10% 80% 10%;
         justify-content: center;
-        padding-top: 0%;
+        align-content: flex-start;
         grid-template-areas:
             "  aboutMe  "
             "  headshot  ";
@@ -282,8 +283,6 @@ ul {
         width: 100%;
         margin-bottom: 10%;
     }
-
-
 
     .bioGrid {
         grid-template-rows: 1fr 1fr;
