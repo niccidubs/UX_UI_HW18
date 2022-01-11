@@ -219,51 +219,69 @@ ul {
    Footer
    =====================*/
 
-.footer {
-    display: inline-block;
-    background-color: #2E4159;
-    width: 100%;
-}
-
-.footer h2 {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-weight: 275;
-    font-size: 43px;
-    line-height: 0px;
-    color: white;
-}
-
-.contact {
-    display: inline-block;
-    padding-bottom: 25px;
-    background-color: #2E4159;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
-
-.contact2 {
-    display: flex;
-    align-items: center;
+   #contact1 {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    grid-template-areas:
+    "contactMe contactMe contactMe"
+    "socialIcons socialIcons socialIcons";
     justify-content: center;
-    background-color: #fe8888;
+    background-color: #2e4159;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 800;
+    font-size: 38px;
     color: white;
-    height: 50px;
-}
-
-.contact2child {
-    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+  }
+  
+  #contact2 {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 1;
+    grid-template-areas:
+      "email phone copyright";
+    background-color: #fe8888;
+    font-family: 'Roboto', san-serif;
     font-weight: 800;
-    font-size: 20px;
-}
+    font-size: 20;
+    color: white;
+    justify-content: center;
+    padding: 15px
+  }
 
-.contact2child a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 800;
+  #contact2 a {
+    font-family: 'Roboto', sanserif;
     font-size: 20px;
-    padding-left: 35px;
-    padding-right: 35px;
-}
+  }
+  
+  #contactMe {
+      grid-area: contactMe;
+  }
+
+  #socialIcons {
+      grid-area: socialIcons;
+      margin-top: 10px;
+;
+  }
+
+  #phone {
+    grid-area: phone;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  #email {
+    grid-area: email;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  #copyright {
+    grid-area: copyright;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
 /* MEDIA QUERY */
 
@@ -343,5 +361,13 @@ ul {
         /* object-fit: cover;
         width: 100%; */
         margin-top: 75px;
+    }
+
+    #contact2 {
+        grid-template-rows: 3;
+        grid-template-areas:
+          "email"
+          "phone"
+          "copyright";
     }
 }
